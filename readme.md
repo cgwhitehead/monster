@@ -12,7 +12,7 @@ Given your energy budget, the optimizer will give you, the monster, a hunting li
 
 Considering all the available animals, you don't have the time or the monster math chops to think through each combo. You're also worried that an optimization algorithm might be lazy and give you a 'better' result, but not the bets (ie local maximum).
 
-This optimizer uses [simlated annealing](https://en.wikipedia.org/wiki/Simulated_annealing) and a novel approach to temperature control.
+This optimizer uses [simlated annealing](https://en.wikipedia.org/wiki/Simulated_annealing) and a novel approach at temperature control.
 ## Data
 Courtesy of [Mockaroo](https://www.mockaroo.com)
 
