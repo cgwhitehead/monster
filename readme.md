@@ -2,6 +2,10 @@
 
 This is a simple project to demo my ability to optimize a simple problem.
 
+# TODO
+* run instructions
+* req txt
+
 ## Why Feed the Monster
 In this case I spend several days looking for the right data for a problem I've been thinking about for quite some time. I realized that for demo purposes it would be quicker to use mock data for a mock problem.
 
