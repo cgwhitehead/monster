@@ -54,7 +54,7 @@ def walking(steps):
         new_hunting_list=change_list(hunting_list)
         score2=evaluate_list(new_hunting_list)
         if score2 > score1:
-            hunting_list=new_hunting_list
+            hunting_list=new_hunting_list.copy()
             if score1>top_happiness:
                 top_happiness=score1
                 hunting_list=new_hunting_list.copy()
@@ -62,11 +62,13 @@ def walking(steps):
             p = np.exp(-(score1)/temp)
             if random()<p:
                 hunting_list=new_hunting_list
+        temp = 60 + 30*np.sin(2*np.pi*counter/(steps/10))
+        print(temp)
         graph_x.append(counter)
         graph_y.append(evaluate_list(hunting_list))
         graph_y2.append(sum(Cost[hunting_list-1]))
     pyplot.plot(graph_x,graph_y)
-    pyplot.plot(graph_x,graph_y2)
+    #pyplot.plot(graph_x,graph_y2)
     print(menu[menu['id'].isin(hunting_list)])
     print('Cost: {}'.format(sum(Cost[hunting_list-1])))
     print('Happy: {}'.format(evaluate_list(hunting_list)))
