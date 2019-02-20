@@ -13,11 +13,16 @@ Happy=menu['happiness'].values
 
 
 def first_list_builder():
+    size=randint(5,15)
     options = np.random.choice(a=menu['id'], size=30, replace=False)
-    return options[0:8]
+    return options[0:size]
 
+    
 def change_list(hunting_list):
-    coin = randint(1,3)
+    if sum(Cost[hunting_list-1])>500:
+        coin=3
+    else:
+        coin = randint(1,3)
     options=np.random.choice(a=menu['id'], size=1000, replace=False)
     new_item = options[0]
     counter=1
@@ -30,6 +35,7 @@ def change_list(hunting_list):
         return np.append(hunting_list[1:] , [new_item])
     else:
         return np.append(hunting_list[2:] , [new_item])
+    
 
 def evaluate_list(hunting_list):
     cost=sum(Cost[hunting_list-1])
@@ -38,6 +44,7 @@ def evaluate_list(hunting_list):
         return 0
     else:
         return happy
+
     
 def walking(steps):
     iters = steps
@@ -62,8 +69,9 @@ def walking(steps):
             p = np.exp(-(score1)/temp)
             if random()<p:
                 hunting_list=new_hunting_list
-        temp = 60 + 30*np.sin(2*np.pi*counter/(steps/10))
-        print(temp)
+        temp = 50*np.sin(2*np.pi*counter/(steps/5))
+        #temp=30
+        print(score1, score2)
         graph_x.append(counter)
         graph_y.append(evaluate_list(hunting_list))
         graph_y2.append(sum(Cost[hunting_list-1]))
