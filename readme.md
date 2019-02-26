@@ -31,6 +31,8 @@ python monster.py
 Then answer Y or N.
 
 ## Thoughts
+This optimizer uses [simlated annealing](https://en.wikipedia.org/wiki/Simulated_annealing) and a novel approach at temperature control.
+
 I wanted to work on a problem with more than one dimension without previous bounds. A sports team for example has a given number of members with a set position configuration.
 For the monster problem I removed the bounds on how many animals could be on the list, meaning the optimizer can go for high cost, high ROI or several low cost
 low ROI. At a later date I'd like to analyze the configurations produced by the optimizer. This could be used to develop a shortcut strategy, create bounds, and speed up optimization
@@ -41,7 +43,6 @@ several optimal menus. If time weren't an option this could run for a long perio
 Instead, (after a lot of runs) I chose 900 happiness to be a good enough menu and so if a menu is found that meets 900 happiness we
 call it good enough and return the list so as not to waste too much of the 'Monsters' time. 
 
-This optimizer uses [simlated annealing](https://en.wikipedia.org/wiki/Simulated_annealing) and a novel approach at temperature control.
 ## Data
 Courtesy of [Mockaroo](https://www.mockaroo.com)
 
