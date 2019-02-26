@@ -17,12 +17,12 @@ Given your energy budget, the optimizer will give you, the monster, a hunting li
 Considering all the available animals, you don't have the time or the monster math chops to think through each combo. You're also worried that an optimization algorithm might be lazy and give you a 'better' result, but not the bets (ie local maximum).
 
 ## Requirements
-* (pandas)[https://pandas.pydata.org/]
-* (numpy)[http://www.numpy.org/]
-* (tqdm)[https://github.com/tqdm/tqdm]
+* [pandas](https://pandas.pydata.org/)
+* [numpy](http://www.numpy.org/)
+* [tqdm](https://github.com/tqdm/tqdm)
 
 ## Optional
-* (matplotlib)[https://matplotlib.org/] Several plotting functions are commented out and are useful for exploring the optimization process. 
+* [matplotlib](https://matplotlib.org/) Several plotting functions are commented out and are useful for exploring the optimization process. 
 
 ## Running
 ```
